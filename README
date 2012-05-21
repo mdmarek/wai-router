@@ -1,1 +1,4 @@
 Provides basic routing on URL paths for WAI.
+
+For more examples of usage see http://www.haskellshapes.com, 
+along with general WAI related posts.
