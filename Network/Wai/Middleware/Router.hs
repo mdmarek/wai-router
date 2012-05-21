@@ -31,14 +31,6 @@ router' ps (r:rs) = case r ps of
   
 
 -- | A possible web application if the path matches, nothing otherwise.
--- 
--- For example:
--- 
--- > let f = dir "/foo/api" myApp
--- > f ["foo","api"]
--- > True
--- > f ["foo","spi"]
--- > False
 dir :: Text -> Application -> Route
 dir path a = let ps = pathPieces path
              in  ( \xs -> if ps == xs 
@@ -49,4 +41,3 @@ dir path a = let ps = pathPieces path
 -- | Pieces of a URL path.
 pathPieces :: Text -> [Text]
 pathPieces path = filter (""/=) $ splitOn "/" path
-                 
